@@ -20,7 +20,7 @@ def getTemp():
 def heating(temp):
     if (temp >= 37.5):
         GPIO.output(relayPort, GPIO.HIGH)
-        print(f'stop heating{temp}')
+        print('stop heating{0:0.1f}*C'.format(temp))
     else:
         GPIO.output(relayPort, GPIO.LOW)
-        print(f'heating{temp}')
+        print('heating{0:0.1f}*C'.format(temp))
